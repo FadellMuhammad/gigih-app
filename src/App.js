@@ -1,13 +1,16 @@
 import './App.css';
+import CardComp from './component/CardComp';
 import data from './Data';
 
 function App() {
+
+  const ImageUrl = data.album.images[1].url;
+  const Title = data.name;
+  const Artist = data.album.artists[0].name;
+
   return (
     <div className="App">
-      <img src={data.album.images[1].url} alt="" />
-      <p>Song title : {data.name}</p>
-      <p>Song Artists : {data.artists[0].name}</p>
-      <button type='submit'>Select</button>
+      <CardComp ImageUrl={ImageUrl} Title={Title} Artist={Artist}  />
     </div>
   );
 }
