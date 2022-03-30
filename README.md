@@ -10,8 +10,13 @@ Homework : convert element to component
 
 --------------------------------------------------------
 
-25/03/2022
+25/03/2022 - Mod2Ses3
 
 Homework : create table, loop data and create component 
 for each track list
 
+--------------------------------------------------------
+
+28/03/2022 - Mod3Ses1
+
+create search song with API spotify

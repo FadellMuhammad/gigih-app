@@ -1,7 +1,10 @@
 import './App.css';
-import TrackComp from './component/TrackComp';
+// import Auth from './Auth/Auth';
+// import TrackComp from './component/TrackComp';
+import Home from './pages/Home';
 // import CardComp from './component/CardComp';
 // import data from './data/Data';
+// import spotify from './Auth/Spotify';
 
 function App() {
 
@@ -13,11 +16,13 @@ function App() {
     <div className="App">
       {/* <CardComp ImageUrl={ImageUrl} Title={Title} Artist={Artist}  /> */}
       {/* {TrackComp} */}
-      <table>
+      {/* Homework Mod2ses3 */}
+      {/* <table>
         <tbody>
           <TrackComp />
         </tbody>
-      </table>
+      </table> */}
+      <Home />
     </div>
   );
 }

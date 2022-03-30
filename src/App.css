@@ -1,7 +1,15 @@
 .App {
-  display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.image {
+  display: flex;
+}
+
+.btn {
+  width: 100px;
+  height: 50px;
 }
 
 p {

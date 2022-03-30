@@ -1,0 +1,36 @@
+.title {
+    margin-top: 50px;
+}
+
+.login {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(10, 152, 62);
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.input {
+    width: 280px;
+    height: 30px;
+    border-radius: 10px 0 0 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.btn-search {
+    position: relative;
+    top: -1px;
+    height: 44px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: rgb(10, 152, 62);
+    color: white;
+    font-weight: bold;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 20px;
+}
