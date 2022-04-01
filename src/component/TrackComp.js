@@ -34,7 +34,7 @@ const TrackComp = ({ data }) => {
             uniq2.push([])
             baris++;
         }
-        uniq2[baris].push(item)
+        return uniq2[baris].push(item)
     })
 
     return (
@@ -48,6 +48,7 @@ const TrackComp = ({ data }) => {
                             <td key={item.id}>
                                 <img src={item.images[1].url} alt={item.name} /> <br />
                                 <p>{item.name}</p>
+                                <button>button</button>
                             </td>
                             // <td key={album.id}>
                             //     <img src={album.images[1].url} alt={album.name} />
