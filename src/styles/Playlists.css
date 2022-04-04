@@ -1,0 +1,14 @@
+.playlist {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.form .form-btn {
+    margin: 15px 0;
+    width: 100px;
+    cursor: pointer;
+}
+
+.playlist h3 {
+    margin: 2px 0;
+}

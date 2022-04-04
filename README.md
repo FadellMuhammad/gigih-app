@@ -19,4 +19,16 @@ for each track list
 
 28/03/2022 - Mod3Ses1
 
-create search song with API spotify
+Homework : create search song with API spotify
+
+--------------------------------------------------------
+
+30/03/2022 - Mod3Ses2
+
+Homework : add select/deselect song to playlist
+
+--------------------------------------------------------
+
+01/03/2022 - Mod3Ses3
+
+Homework : add form create playlist
