@@ -15,24 +15,26 @@ const Playlists = () => {
 
   return (
     <div className='playlist'>
-      <h2>Create Playlist</h2>
-      <Form />
-      <div className='playlist'>
-        <h2>Playlist</h2>
-        <ul type='none'>
-          {
-            playlist?.items && playlist.items.map(item => (
-              <li key={item.id}>
-                <img src={item.images[0].url} alt={item.name} />
-                <div className='desc'>
-                  <div className='title-comp'>
-                    <p className='title-name max-lines'>{item.name}</p>
+      <div className="container">
+        <h2>Create Playlist</h2>
+        <Form />
+        <div className='playlist'>
+          <h2>Playlist</h2>
+          <ul type='none'>
+            {
+              playlist?.items && playlist.items.map(item => (
+                <li key={item.id}>
+                  <img src={item.images[0].url} alt={item.name} />
+                  <div className='desc'>
+                    <div className='title-comp'>
+                      <p className='title-name max-lines'>{item.name}</p>
+                    </div>
                   </div>
-                </div>
-              </li>
-            ))
-          }
-        </ul>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
     </div>
   )

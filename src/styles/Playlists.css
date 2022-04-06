@@ -3,10 +3,19 @@
     margin-top: 50px;
 }
 
+.form input {
+    color:black;
+}
+
+.playlist h2 {
+    color: white;
+}
+
 .form .form-btn {
     margin: 15px 0;
     width: 100px;
     cursor: pointer;
+    color: black;
 }
 
 .playlist h3 {

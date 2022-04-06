@@ -3,6 +3,7 @@ import { getCurrentUserProfile } from '../api/Services'
 import '../styles/Profile.css'
 import { useDispatch } from 'react-redux'
 import { getUserId } from '../reducers/apiSlice'
+import '../styles/Profile.css'
 
 const Profile = () => {
 
@@ -19,7 +20,6 @@ const Profile = () => {
 
     return (
         <div className='profile'>
-            <h2>Profile</h2>
             {
                 profile !== '' ?
                     <div className="profile-comp">

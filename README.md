@@ -38,3 +38,9 @@ Homework : add form create playlist
 04/04/2022 - Mod4Ses1
 
 Homework : use redux to global state
+
+-------------------------------------------------------
+
+06/04/2022 - Mod4Ses2
+
+Homework : use react router

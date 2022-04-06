@@ -1,0 +1,25 @@
+.header {
+    height: 70px;
+}
+
+.header .header-item {
+    display: flex;
+    align-items: center;
+    line-height: 70px;
+}
+
+.header-item h1 {
+    color: white;
+    margin: 0;
+}
+
+.header-item .ant-btn {
+    font-weight: bold;
+    width: 130px;
+    height: 42px;
+    border-radius: 30px;
+    font-size: 18px;
+    background-color: #1db954;
+    color: white;
+    border: 0;
+}

@@ -3,10 +3,6 @@
     text-align: left;
 }
 
-.profile h2 {
-    margin: 5px 0;
-}
-
 .profile img {
     border-radius: 50%;
     width: 60px;
@@ -19,5 +15,9 @@
 }
 
 .profile-comp .name {
-    margin-left: 10px;
+    margin-left: 20px;
+}
+
+.profile-comp .name p {
+    margin: 0;
 }
