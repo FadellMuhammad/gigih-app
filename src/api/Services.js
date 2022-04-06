@@ -24,8 +24,9 @@ const getCurrentUserProfile = () => {
     return result
 }
 
-const createPlaylist = ({ name, description }) => {
-    const result = fetch(`${baseURL}/users/${localStorage.getItem('userID')}/playlists`, {
+
+const createPlaylist = ({ name, description }, userId) => {
+    const result = fetch(`${baseURL}/users/${userId}/playlists`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -41,20 +42,14 @@ const createPlaylist = ({ name, description }) => {
     return result
 }
 
-const addItemsToPlaylist = () => {
-    const uri = []
+const addItemsToPlaylist = (playlistId, dataSelected) => {
+    const uri = [];
 
-    const selected_item = JSON.parse(localStorage.getItem('selected_item'));
-    // console.log("selected item ",selected_item);
-
-    const trackID = Object.values(selected_item);
-    // console.log('trackID',trackID);
-
-    for (let index = 0; index < trackID.length; index++) {
-        uri.push(trackID[index].uri);
+    for (let index = 0; index < dataSelected.length; index++) {
+        uri.push(dataSelected[index].uri);
     }
 
-    const result = fetch(`${baseURL}/playlists/${localStorage.getItem('playlistID')}/tracks`, {
+    const result = fetch(`${baseURL}/playlists/${playlistId}/tracks`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -70,5 +65,17 @@ const addItemsToPlaylist = () => {
     return result
 }
 
+const getPlaylist = (userId) => {
+    const result = fetch(`${baseURL}/users/${userId}/playlists`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('token')}`
+        },
+    })
+        .then(res => res.json())
+    return result
+}
 
-export { Search, getCurrentUserProfile, createPlaylist, addItemsToPlaylist }
+
+export { Search, getCurrentUserProfile, createPlaylist, addItemsToPlaylist, getPlaylist }

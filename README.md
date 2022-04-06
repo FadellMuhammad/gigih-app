@@ -32,3 +32,9 @@ Homework : add select/deselect song to playlist
 01/03/2022 - Mod3Ses3
 
 Homework : add form create playlist
+
+---------------------------------------------------
+
+04/04/2022 - Mod4Ses1
+
+Homework : use redux to global state

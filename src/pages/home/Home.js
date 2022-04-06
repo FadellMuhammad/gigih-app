@@ -1,28 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { redirectToSpotify, setTokenToLocalStorage } from '../../api/Auth'
+import { getSearch } from '../../reducers/apiSlice';
+import { useDispatch } from 'react-redux';
 import { Search } from '../../api/Services';
-import TrackList from '../../components/TrackList';
 import Profile from '../../components/Profile';
-import '../../styles/Home.css';
 import Playlists from '../playlists/Playlists';
+import SearchDataComp from '../../components/SearchDataComp';
+import SelectDataComp from '../../components/SelectDataComp';
+import '../../styles/Home.css';
 
 const Home = () => {
-    const [data, setData] = useState('');
     const [login, setLogin] = useState(false);
     const [search, setSearch] = useState('');
     const [token, setToken] = useState('');
-
-    if (localStorage.getItem('selected_item') === null) {
-        localStorage.setItem('selected_item', JSON.stringify({}));
-    }
-
-    if (localStorage.getItem('playlistItem') === null) {
-        localStorage.setItem('playlistItem', JSON.stringify({}));
-    }
-
-    if (localStorage.getItem('musikItem') === null) {
-        localStorage.setItem('musikItem', JSON.stringify({}));
-    }
+    const dispatch = useDispatch();
 
     useEffect(() => {
         setToken(setTokenToLocalStorage);
@@ -41,13 +32,9 @@ const Home = () => {
         }
     }
 
-    const addInput = (e) => {
-        setSearch(e.target.value);
-    }
-
     const getData = () => {
         if (search !== '' && token !== null) {
-            Search(search).then(data => setData(data));
+            Search(search).then(data => dispatch(getSearch(data)));
         }
     }
 
@@ -68,12 +55,11 @@ const Home = () => {
                         </div>
                         <div className="search">
                             <h1 className='title'>Search Song</h1>
-                            <input name='search' type="text" placeholder="search song" onChange={addInput} className="input" />
+                            <input name='search' type="text" placeholder="search song" onChange={(e) => setSearch(e.target.value)} className="input" />
                             <button onClick={getData} className='btn-search'>Search</button>
                             <div className='track-list'>
-                                {
-                                    <TrackList data={data} />
-                                }
+                                <SelectDataComp />
+                                <SearchDataComp />
                             </div>
                         </div>
                     </>

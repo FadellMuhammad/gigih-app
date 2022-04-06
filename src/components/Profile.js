@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { getCurrentUserProfile } from '../api/Services'
 import '../styles/Profile.css'
+import { useDispatch } from 'react-redux'
+import { getUserId } from '../reducers/apiSlice'
 
 const Profile = () => {
 
     const [profile, setProfile] = useState('');
+    const dispatch = useDispatch();
 
-    useEffect(() => {
-        getCurrentUserProfile().then(data => setProfile(data))
+    useState(() => {
+        getCurrentUserProfile()
+            .then((data) => {
+                setProfile(data)
+                dispatch(getUserId(data.id))
+            })
     }, [])
-
-    if (profile !== undefined) {
-        localStorage.setItem('userID', profile.id);
-    }
 
     return (
         <div className='profile'>
