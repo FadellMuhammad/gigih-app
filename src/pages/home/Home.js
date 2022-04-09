@@ -1,28 +1,56 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Profile from '../../components/Profile';
 import { Row, Col, Button } from 'antd'
 import '../../styles/Home.css';
 import { Link } from 'react-router-dom';
+import './Home.scss'
+// import ListPlaylists from '../../components/ListPlaylists';
+import SearchDataComp from '../../components/SearchDataComp';
+import SelectDataComp from '../../components/SelectDataComp';
 
 const Home = () => {
 
-    return (
-        <div className='home'>
-            <div className="container">
-                <Row>
-                    <Col span={6}>
-                        <Profile />
-                        <Button><Link to='./create-playlist'>Create Playlist</Link></Button> <br /> <br />
-                        <Button><Link to='./search'>Search Lagu</Link></Button> <br /> <br />
-                        <Button><Link to='./lagu-selected'>Lagu Selected</Link></Button>
-                    </Col>
-                    {/* <Col span={16}>
-                
-                </Col> */}
-                </Row >
+  const [changeComp, setChangeComp] = useState(<SearchDataComp />);
+  const [select, setSelect] = useState(true);
+
+  const setSearchComp = () => {
+    setChangeComp(<SearchDataComp />);
+    setSelect(true);
+  }
+
+  const setSelectedComp = () => {
+    setChangeComp(<SelectDataComp />)
+    setSelect(false);
+  }
+
+  return (
+    <div className='home'>
+      <div className="container">
+        <Row>
+          <Col>
+            <Profile />
+            <div className="createPlaylist">
+              <Button><Link to='./create-playlist'>Create Playlist</Link></Button> <br /> <br />
             </div>
-        </div>
-    )
+            <div className="list-playlist">
+              {/* <ListPlaylists /> */}
+            </div>
+            <div className='search-select'>
+              <Button onClick={setSearchComp} style={{
+                backgroundColor: select ? 'rgba(255, 255, 255, 0.231)' : '',
+              }}>Search Lagu</Button>
+              <Button onClick={setSelectedComp} style={{
+                backgroundColor: select ? '' : 'rgba(255, 255, 255, 0.231)',}}>Lagu Selected</Button>
+              <hr />
+              <div className="component-search-select">
+              </div>
+            </div>
+            {changeComp}
+          </Col>
+        </Row >
+      </div>
+    </div>
+  )
 }
 
 export default Home

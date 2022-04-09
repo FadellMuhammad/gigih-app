@@ -5,13 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './store';
-import 'antd/dist/antd.css';
-import './assets/css/Styles.css'
+import './assets/scss/Styles.scss'
 
 ReactDOM.render(
   <Provider store={store}>
     {/* <React.StrictMode> */}
-      <App />
+    <App />
     {/* </React.StrictMode>, */}
   </Provider>,
   document.getElementById('root')

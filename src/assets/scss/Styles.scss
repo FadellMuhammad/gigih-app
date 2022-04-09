@@ -1,0 +1,40 @@
+@import "antd/dist/antd.css";
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;500;800&display=swap');
+
+.container {
+    margin: 0 250px;
+}
+
+body {
+    background-color: #050b16;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.max-lines {
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        margin: 0 150px;
+    }   
+}
+
+
+@media screen and (max-width: 1113px) {
+    .container {
+        margin: 0 100px;
+    }   
+}
+
+
+@media screen and (max-width: 612px) {
+    .container {
+        margin: 0 50px;
+    }   
+}

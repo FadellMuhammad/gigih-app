@@ -1,0 +1,22 @@
+.profile {
+    margin: 20px 0;
+
+    .profile-comp {
+        display: flex;
+
+        img {
+            width: 75px;
+            height: 80px;
+            border-radius: 10px;
+        }
+
+        .name {
+            margin-left: 20px;
+            font-size: 20px;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

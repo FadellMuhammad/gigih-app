@@ -1,0 +1,78 @@
+.home {
+
+    .createPlaylist {
+        .ant-btn {
+            // margin: 20px 0;
+            background-color: white;
+            color: #2e0d31;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .ant-btn:hover {
+            color: #c33e88;
+            border-color: #c33e88;
+        }
+    }
+
+    .search-select {
+        margin-top: 50px;
+
+        hr {
+            width: auto;
+        }
+
+        .ant-btn {
+            background-color: #00000000;
+            border: none;
+            // color: #c33e88;
+            color: white;
+            font-size: 15px;
+        }
+
+        hr {
+            margin: 0;
+        }
+
+        .ant-btn:hover {
+            background-color: rgba(255, 255, 255, 0.231);
+        }
+    }
+
+    // ------------------------------------------
+    .search {
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        input {
+            color: black;
+            width: 230px;
+            height: 40px;
+            border-radius: 10px 0 0 10px;
+            padding-left: 10px;
+            border-color: #13293b;
+            outline-color: #c33e88;
+        }
+
+        .ant-btn {
+            border-color: #13293b;
+            border-radius: 0 10px 10px 0;
+            width: 100px;
+            height: 38px;
+            background-color: #c33e88;
+            color: white;
+        }
+
+        .ant-btn:hover {
+            background-color: #d45199;
+        }
+    }
+
+    // -------------------------------------------
+    .selected {
+        margin-top: 50px;
+        .data-selected {
+            margin-left: 10px;
+        }
+    }
+}

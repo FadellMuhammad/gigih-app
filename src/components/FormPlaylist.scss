@@ -1,0 +1,47 @@
+.form-playlist {
+    width: 500px;
+    .title {
+        padding-bottom: 10px;
+    }
+
+    h1 {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        margin: 50px 0 40px 0;
+    }
+
+    .ant-form {
+        .ant-form-item-label {
+            text-align: left;
+
+            label {
+                color: white;
+            }
+        }
+    }
+
+    .ant-form-item-explain-error {
+        color: rgb(254, 60, 60);
+    }
+
+    .btn-submit {
+        background-color: #c33e88;
+        color: white;
+        border-color: #13293b;
+        max-width: 150px;
+    }
+
+    .ant-form-item-control-input-content {
+        text-align: end;
+    }
+    
+    .btn-submit:hover {
+        background-color: #d25198;
+        border-color: white;
+    }
+
+    .btn-submit:focus {
+        background-color: #c33e88;
+    }
+}
