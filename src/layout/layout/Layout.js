@@ -2,12 +2,13 @@ import React from 'react'
 import Header from '../header/Header'
 
 const Layout = (Children) => {
-  return (props) => (
+  const p = (props) => (
     <>
       <Header />
       <Children {...props} />
     </>
   )
+  return p
 }
 
-export default Layout
+export default Layout 

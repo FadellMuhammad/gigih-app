@@ -20,8 +20,8 @@
             "error",
             "windows"
         ],
-        "quotes": ["error", "single"],
-        "react/display-name": "off" 
+        "quotes": ["error", "single"]
+        // "react/display-name": "off" 
     },
     "parserOptions": {
         "ecmaVersion": 2021,

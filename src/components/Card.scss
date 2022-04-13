@@ -1,6 +1,9 @@
 ul {
-    display: flex;
-    flex-wrap: wrap;
+    width: 1020px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    // display: flex;
+    // flex-wrap: wrap;
     padding: 0;
     justify-content: center;
 }
