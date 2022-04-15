@@ -10,8 +10,8 @@ import { Redirect } from 'react-router-dom';
 import Playlists from './pages/playlists/Playlists';
 import LandingPage from './pages/landingPage/LandingPage';
 import Layout from './layout/layout/Layout';
-import SearchDataComp from './components/SearchDataComp';
-import SelectDataComp from './components/SelectDataComp';
+import SearchDataComp from './components/SearchDataComp.tsx';
+import SelectDataComp from './components/SelectDataComp.tsx';
 import NoMatch from './NoMatch';
 
 const LoginRoute = ({ ...props }) => {

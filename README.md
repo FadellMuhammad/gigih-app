@@ -33,14 +33,38 @@ Homework : add select/deselect song to playlist
 
 Homework : add form create playlist
 
----------------------------------------------------
+--------------------------------------------------------
 
 04/04/2022 - Mod4Ses1
 
 Homework : use redux to global state
 
--------------------------------------------------------
+--------------------------------------------------------
 
 06/04/2022 - Mod4Ses2
 
 Homework : use react router
+
+--------------------------------------------------------
+
+08/04/2022 - Mod4Ses3
+
+Homework : use eslint in project
+
+--------------------------------------------------------
+
+11/04/2022 - Mod5Ses1
+
+Homework : use css layout grid and flexbox
+
+--------------------------------------------------------
+
+13/04/2022 - Mod5Ses2
+
+Homework : use design system like ant-design
+
+--------------------------------------------------------
+
+14/04/2022 - Mod5Ses3
+
+HomeWork : use typescript in component

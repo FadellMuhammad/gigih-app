@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit'
 export const apiSlice = createSlice({
   name: 'data',
   initialState: {
-    dataSearch: '',
-    dataSelect: '',
+    dataSearch: {},
+    dataSelect: [],
     userId: '',
     playlistId: ''
   },

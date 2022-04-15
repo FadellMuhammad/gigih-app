@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import Profile from '../../components/Profile';
 import { Row, Col, Button } from 'antd'
-import '../../styles/Home.css';
 import { Link } from 'react-router-dom';
+import Profile from '../../components/Profile';
+import '../../styles/Home.css';
 import './Home.scss'
 // import ListPlaylists from '../../components/ListPlaylists';
-import SearchDataComp from '../../components/SearchDataComp';
+import SearchDataComp from '../../components/SearchDataComp.tsx';
 import SelectDataComp from '../../components/SelectDataComp';
 
 const Home = () => {
