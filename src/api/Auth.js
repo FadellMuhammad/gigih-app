@@ -1,5 +1,5 @@
 let client_id = '1278b361ca2b4bcbb31f8789c30e9cb8';
-let redirect_uri = 'http://localhost:3000/';
+let redirect_uri = 'https://gigih-app.vercel.app/';
 let scope = 'playlist-modify-private';
 
 const redirectToSpotify = async () => {
