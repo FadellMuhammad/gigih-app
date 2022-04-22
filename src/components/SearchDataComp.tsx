@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/*eslint import/no-unresolved: 2*/
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getSearchValue } from '../api/Services';
@@ -20,6 +18,7 @@ const SearchDataComp = () => {
 
   type ItemType = {
       id: string | number;
+      duration_ms: number;
       album: {
         name: string;
         images: [

@@ -26,7 +26,7 @@ const LoginRoute = ({ ...props }) => {
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App" data-testid="App">
         <Switch>
           <Route exact path="/" component={Layout(LandingPage)} />
           <LoginRoute path="/home" component={Layout(Home)} />

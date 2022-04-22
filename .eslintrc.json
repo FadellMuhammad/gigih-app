@@ -26,7 +26,8 @@
         "quotes": ["error", "single"],
         "react/display-name": "off" ,
         "no-undef": "off",
-        "import/no-unresolved": 2
+        "import/no-unresolved": 2,
+        "@typescript-eslint/no-explicit-any": "off"
     },
     "parserOptions": {
         "ecmaVersion": 2021,

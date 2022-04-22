@@ -35,7 +35,8 @@ const createPlaylist = ({ name, description }, userId) => {
     body: JSON.stringify({
       'name': `${name}`,
       'description': `${description}`,
-      'public': false
+      'public': false,
+      'collaborative': false
     })
   })
     .then(res => res.json())

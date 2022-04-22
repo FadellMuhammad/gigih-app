@@ -32,9 +32,9 @@ const Home = () => {
             <div className="createPlaylist">
               <Button><Link to='./create-playlist'>Create Playlist</Link></Button> <br /> <br />
             </div>
-            <div className="list-playlist">
-              {/* <ListPlaylists /> */}
-            </div>
+            {/* <div className="list-playlist"> */}
+            {/* <ListPlaylists /> */}
+            {/* </div> */}
             <div className='search-select'>
               <Button onClick={setSearchComp} style={{
                 backgroundColor: select ? 'rgba(255, 255, 255, 0.231)' : '',

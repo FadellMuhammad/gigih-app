@@ -3,8 +3,9 @@ import { addItemsToPlaylist, createPlaylist } from '../api/Services'
 import { useDispatch, useSelector } from 'react-redux';
 import '../styles/Playlists.css'
 import { getPlaylistId, getSelect } from '../reducers/apiSlice';
-import { Form, Button, Input } from 'antd';
+import { Form, Button, Input, message } from 'antd';
 import './FormPlaylist.scss'
+import { useHistory } from 'react-router-dom';
 
 const FormPlaylist = () => {
 
@@ -13,22 +14,31 @@ const FormPlaylist = () => {
   const { dataSelect } = useSelector((state) => state.dataSelect);
   const dataSelected = Object.values(dataSelect)
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const getPlaylist = async () => {
     return await createPlaylist(formInput, userId).then(res => {
       dispatch(getPlaylistId(res.id))
       return res.id
-    });
+    })
   }
 
   const addPlaylistId = async (playlistId) => {
-    await addItemsToPlaylist(playlistId, dataSelected).then(res => console.log(res))
+    await addItemsToPlaylist(playlistId, dataSelected)
+      .then(res => console.log(res))
+      .then(() => {
+        message.success('Success create playlist')
+        history.push('/home')
+      })
+      .catch(() => message.error('Failed create playlist'))
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     // e.preventDefault()
     getPlaylist()
       .then((playlistId) => addPlaylistId(playlistId))
+
+    setFormInput('')
     delete { ...dataSelect }
     dispatch(getSelect(''))
   }
@@ -51,7 +61,7 @@ const FormPlaylist = () => {
       >
         <Form.Item className='title' label='Title' name="name" rules={[
           {
-            required:true,
+            required: true,
             message: 'Please input title min 10 character',
             min: 10,
           },
@@ -69,7 +79,7 @@ const FormPlaylist = () => {
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit" className='btn-submit'>
-                        Submit
+            Submit
           </Button>
         </Form.Item>
       </Form>
