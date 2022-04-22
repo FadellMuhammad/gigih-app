@@ -1,70 +1,16 @@
-21/03/2022
+# Sublify
 
-Homework : create page in app.js
+Website untuk mencari dan membuat playlist anda sendiri
 
---------------------------------------------------------
+## Fitur
 
-23/03/2022
+- terdapat fitur login dan logout.
+- Terdapat fitur search lagu, dengan informasi tentang foto album, judul lagu, nama penyanyi, dan durasi lagu.
+- Terdapat fitur create playlist lagu kita sendiri.
 
-Homework : convert element to component
+## Instalation
 
---------------------------------------------------------
-
-25/03/2022 - Mod2Ses3
-
-Homework : create table, loop data and create component 
-for each track list
-
---------------------------------------------------------
-
-28/03/2022 - Mod3Ses1
-
-Homework : create search song with API spotify
-
---------------------------------------------------------
-
-30/03/2022 - Mod3Ses2
-
-Homework : add select/deselect song to playlist
-
---------------------------------------------------------
-
-01/03/2022 - Mod3Ses3
-
-Homework : add form create playlist
-
---------------------------------------------------------
-
-04/04/2022 - Mod4Ses1
-
-Homework : use redux to global state
-
---------------------------------------------------------
-
-06/04/2022 - Mod4Ses2
-
-Homework : use react router
-
---------------------------------------------------------
-
-08/04/2022 - Mod4Ses3
-
-Homework : use eslint in project
-
---------------------------------------------------------
-
-11/04/2022 - Mod5Ses1
-
-Homework : use css layout grid and flexbox
-
---------------------------------------------------------
-
-13/04/2022 - Mod5Ses2
-
-Homework : use design system like ant-design
-
---------------------------------------------------------
-
-14/04/2022 - Mod5Ses3
-
-HomeWork : use typescript in component
+1. clone terlebih dahulu repository ini, https://github.com/FadellMuhammad/gigih-app.git
+2. lalu masukan yarn di terminal anda untuk install modul.
+3. lalu yarn start
+4. aplikasi sudah bisa dilihat dan digunakan.
